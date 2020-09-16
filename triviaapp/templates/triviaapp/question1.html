@@ -1,0 +1,9 @@
+{% extends "triviaapp/base.html" %}
+{% block content %}
+    <form action="{% url 'question1' %}" method="post">
+    {% csrf_token %}
+    What is your name?</br>
+    <input type="text" id="name" name="name"/>
+    <button type="submit" value="next">Next</button>
+    </form>
+{% endblock content %}

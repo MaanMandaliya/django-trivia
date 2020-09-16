@@ -1,0 +1,14 @@
+{% extends "triviaapp/base.html" %}
+{% block content %}
+    <p class="article-content">
+    Summary:<br>
+    Hello {{ game.player }},<br>
+    Here are the answers selected:<br>
+    Who is the best cricketer in the world?<br>
+    Answer: {{ game.answer1 }}<br>
+    What are the colors in the national flag?<br>
+    Answers : {{ game.answers2 }}<br>
+    </p>
+     <a class="btn btn-outline-info mb-4" href="{% url 'home' %}">Finish</a>
+     <a class="btn btn-outline-info mb-4" href="{% url 'history' %}">History</a>
+{% endblock %}

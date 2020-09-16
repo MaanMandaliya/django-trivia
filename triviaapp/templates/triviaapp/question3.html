@@ -1,0 +1,17 @@
+{% extends "triviaapp/base.html" %}
+{% block content %}
+    <form action="{% url 'question3' %}" method="post">
+    {% csrf_token %}
+    What are the colors in the Indian national flag? Select all:</br>
+    Options</br>
+    <input type="checkbox" id="white" name="answers2" value="white">
+    <label for="white">White</label><br>
+    <input type="checkbox" id="yellow" name="answers2" value="yellow">
+    <label for="yellow">Yellow</label><br>
+    <input type="checkbox" id="orange" name="answers2" value="orange">
+    <label for="orange">Orange</label><br>
+    <input type="checkbox" id="green" name="answers2" value="green">
+    <label for="green">Green</label><br>
+    <button type="submit" value="next">Next</button>
+    </form>
+{% endblock %}

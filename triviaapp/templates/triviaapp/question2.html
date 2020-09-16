@@ -1,0 +1,17 @@
+{% extends "triviaapp/base.html" %}
+{% block content %}
+    <form action="{% url 'question2' %}" method="post">
+    {% csrf_token %}
+    Who is the best cricketer in the world?</br>
+    Options</br>
+    <input type="radio" id="sachintendulkar" name="answer1" value="Sachin Tendulkar">
+    <label for="sachintendulkar">Sachin Tendulkar</label><br>
+    <input type="radio" id="viratkohli" name="answer1" value="Virat Kohli">
+    <label for="viratkohli">Virat Kohli</label><br>
+    <input type="radio" id="adamgilchrist" name="answer1" value="Adam Gilchirst">
+    <label for="adamgilchrist">Adam Gilchirst</label><br>
+    <input type="radio" id="jacqueskallis" name="answer1" value="Jacques Kallis">
+    <label for="jacqueskallis">Jacques Kallis</label><br>
+    <button type="submit" value="next">Next</button>
+    </form>
+{% endblock content %}
